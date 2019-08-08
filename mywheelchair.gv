@@ -1,0 +1,14 @@
+digraph G {
+node [shape=box];
+"seat_base" [label="seat_base"];
+"left_wheel" [label="left_wheel"];
+"right_wheel" [label="right_wheel"];
+"seatback" [label="seatback"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"seat_base" -> "left_wheel_hinge" [label="xyz: 0.2 0.25 0.1 \nrpy: 0 -0 0"]
+"left_wheel_hinge" -> "left_wheel"
+"seat_base" -> "right_wheel_hinge" [label="xyz: 0.2 -0.25 0.1 \nrpy: 0 -0 0"]
+"right_wheel_hinge" -> "right_wheel"
+"seat_base" -> "seat_back_hinge" [label="xyz: -0.19 0 0.4 \nrpy: 0 -0 0"]
+"seat_back_hinge" -> "seatback"
+}
